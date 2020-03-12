@@ -1,0 +1,49 @@
+<div class="bg">
+    
+    <div class="container">
+      <h1 class="title">Create Interview Session</h1>
+
+      <div class="row justify-content-center">
+        <div class="col-sm-6 align-self-center">
+    
+            <form>
+
+                <!-- Interview ID -->
+                <div class="form-row">
+                  <div class="col-md-12">
+                    <label for="validationCustom01">Interview ID</label>
+                    <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                  </div>
+                </div>
+                
+                <!-- Interview Date and Time -->
+                <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label>Date</label>
+                    <input type="date" class="form-control" value="YYYY-MM-DD" required>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label>Start Time</label>
+                    <input class="form-control" type="time"  value="HH:MM:SS" id="example-date-input">
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label>End Time</label>
+                    <input class="form-control" type="time"  value="HH:MM:SS" id="example-date-input">
+                  </div>
+                </div>
+                
+                <!-- Participants -->
+                <div class="form-group">
+                    <label for="exampleSelect2">Select all participants</label>
+                    <select multiple class="form-control" id="exampleSelect2">
+                        <option *ngFor="let P of participants" [value]="P">{{P.Name}}>1</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-primary" type="submit">Submit form</button>
+              </form>
+
+      </div>
+    </div>
+  
+  </div>
